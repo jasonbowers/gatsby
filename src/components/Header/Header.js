@@ -7,7 +7,7 @@ import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
 import config from "../../../content/meta/config";
 import Menu from "../Menu";
 
-import avatar from "../../images/jpg/avatar.jpg";
+import avatar from "../../images/jpg/avatar.png";
 
 class Header extends React.Component {
   state = {
@@ -38,12 +38,15 @@ class Header extends React.Component {
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <div className="logo">
-              <img src={config.gravatarImgMd5=="" ? avatar : config.gravatarImgMd5 } alt={config.siteTitle} />
+              <img
+                src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
+                alt={config.siteTitle}
+              />
             </div>
-            <div className="type">
+            {/* <div className="type">
               <h1>{config.headerTitle}</h1>
               <h2>{config.headerSubTitle}</h2>
-            </div>
+            </div> */}
           </Link>
           <FontLoadedContext.Consumer>
             {loaded => (
@@ -111,18 +114,17 @@ class Header extends React.Component {
           }
 
           .logo {
-            border-radius: 65% 75%;
-            border: 1px solid #eee;
             display: inline-block;
-            height: 44px;
+            height: 120px;
             margin: ${theme.space.inline.default};
             overflow: hidden;
-            width: 44px;
+            width: 120px;
             transition: all 0.5s;
+            transform: translateY(50px);
 
             .homepage & {
-              height: 60px;
-              width: 60px;
+              height: 120px;
+              width: 120px;
             }
 
             img {
@@ -219,8 +221,10 @@ class Header extends React.Component {
               margin: ${theme.space.inline.default};
 
               .fixed & {
-                height: 36px;
-                width: 36px;
+                height: 80px;
+                width: 80px;
+                position: absolute;
+                top: -45px;
               }
 
               .header.homepage:not(.fixed) & {
