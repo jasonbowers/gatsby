@@ -8,8 +8,8 @@ module.exports = {
   siteLanguage: "en",
 
   /* author */
-  authorName: "greg lobinski",
-  authorTwitterAccount: "greglobinski",
+  authorName: "Jason Bowers",
+  authorTwitterAccount: "Jason Bowers",
 
   /* info */
   headerTitle: "Jason Bowers",
