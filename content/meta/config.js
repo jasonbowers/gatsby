@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "Jason Bowers", // <title>
   shortSiteTitle: "Jason Bowers", // <title> ending for posts and pages
   siteDescription: "HeroBlog is a GatsbyJS starter.",
-  siteUrl: "",
+  siteUrl: "https://dreamy-archimedes-e8a8a5.netlify.com/",
   // pathPrefix: "",
   siteImage: "",
   siteLanguage: "en",
