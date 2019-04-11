@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Test post!'
+title: 'Test post 3!'
 author: Jason
 tags: ['Getting Started']
 image: img/writing.jpg

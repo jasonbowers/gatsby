@@ -16,6 +16,7 @@ module.exports = {
       options: {
         name: 'content',
         path: path.join(__dirname, 'src', 'content'),
+        ignore: process.env.NODE_ENV === `production` && [`**/draft-*`],
       },
     },
     {
