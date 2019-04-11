@@ -17,6 +17,11 @@ const PageTemplate = css`
   }
 `;
 
+const divStyle = {
+  width: '50vw',
+  margin: '0 auto',
+};
+
 const About: React.FunctionComponent = () => (
   <IndexLayout>
     <Helmet>
@@ -35,7 +40,7 @@ const About: React.FunctionComponent = () => (
           </PostFullHeader>
 
           <PostFullContent className="post-full-content">
-            <div className="post-content">
+            <div className="post-content" style={divStyle}>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus leo,
                 non tempus magna vehicula ac. Maecenas mollis ante finibus pharetra imperdiet.

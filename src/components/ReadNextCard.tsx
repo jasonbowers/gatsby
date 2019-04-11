@@ -2,6 +2,7 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 import * as React from 'react';
 import styled from '@emotion/styled';
 import * as _ from 'lodash';
+import { darken, desaturate, mix } from 'polished';
 
 import { colors } from '../styles/colors';
 import InfinityIcon from './icons/infinity';
@@ -34,7 +35,13 @@ const ReadNextCardStyles = styled.article`
     bottom: 0;
     left: 0;
     display: block;
-    background: linear-gradient(135deg, rgba(0, 40, 60, 0.8) 0%, rgba(0, 20, 40, 0.7) 100%);
+    background: linear-gradient(
+      ${mix('0.1', '#fff', colors.yellow)},
+      ${desaturate('0.1', darken('0.07', colors.yellow))} 60%,
+      ${desaturate('0.1', darken('0.07', colors.yellow))} 90%,
+      ${desaturate('0.1', darken('0.04', colors.yellow))}
+    );
+    opacity: 0.25;
     border-radius: 5px;
     backdrop-filter: blur(2px);
   }

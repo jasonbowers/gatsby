@@ -47,12 +47,12 @@ export const NoImage = css`
 
 export const PostFullHeader = styled.header`
   margin: 0 auto;
-  padding: 6vw 3vw 3vw;
+  padding: 2vw 3vw 3vw;
   max-width: 1040px;
   text-align: center;
 
   @media (max-width: 500px) {
-    padding: 14vw 3vw 10vw;
+    padding: 2vw 3vw 2vw;
   }
 `;
 
@@ -61,25 +61,29 @@ const PostFullMeta = styled.section`
   justify-content: center;
   align-items: center;
   color: ${colors.midgrey};
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 600;
   text-transform: uppercase;
+  margin-bottom: 2vh;
 
   @media (max-width: 500px) {
-    font-size: 1.2rem;
+    font-size: 0.85rem;
     line-height: 1.3em;
   }
 `;
 
 const PostFullMetaDate = styled.time`
-  color: ${colors.blue};
+  color: ${colors.yellow};
 `;
 
 export const PostFullTitle = styled.h1`
-  margin: 0;
+  margin: 3vh auto;
+  font-size: 4rem;
+  max-width: 800px;
   color: ${setLightness('0.05', colors.darkgrey)};
   @media (max-width: 500px) {
-    font-size: 2.9rem;
+    font-size: 2rem;
+    margin: 2vh;
   }
 `;
 
@@ -89,6 +93,7 @@ const PostFullImage = styled.figure`
   background: ${colors.lightgrey} center center;
   background-size: cover;
   border-radius: 5px;
+  position: relative;
 
   @media (max-width: 1170px) {
     margin: 0 -4vw -100px;
@@ -282,6 +287,7 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
             {/* TODO: no-image css tag? */}
             <article css={[PostFull, !post.frontmatter.image && NoImage]}>
               <PostFullHeader>
+                <PostFullTitle>{post.frontmatter.title}</PostFullTitle>
                 <PostFullMeta>
                   <PostFullMetaDate dateTime={post.frontmatter.date}>
                     {post.frontmatter.userDate}
@@ -295,7 +301,6 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
                     </>
                   )}
                 </PostFullMeta>
-                <PostFullTitle>{post.frontmatter.title}</PostFullTitle>
               </PostFullHeader>
 
               {post.frontmatter.image && post.frontmatter.image.childImageSharp && (

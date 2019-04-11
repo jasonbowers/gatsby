@@ -78,7 +78,7 @@ const PostCardTitle = styled.h2`
 `;
 
 const PostCardExcerpt = styled.section`
-  font-family: Georgia, serif;
+  font-family: inherit;
 `;
 
 const PostCardMeta = styled.footer`
@@ -140,7 +140,7 @@ const AuthorListItem = styled.li`
 
 const AuthorNameTooltip = styled.div`
   position: absolute;
-  bottom: 105%;
+  bottom: 120%;
   z-index: 999;
   display: block;
   padding: 2px 8px;
@@ -164,7 +164,8 @@ const AuthorNameTooltip = styled.div`
 const StaticAvatar = css`
   display: block;
   overflow: hidden;
-  margin: 0 10px;
+  margin: 0;
+  margin-right: 15px;
   width: 40px;
   height: 40px;
   border: #fff 2px solid;
@@ -180,17 +181,6 @@ const AuthorProfileImage = styled.img`
   background: ${lighten('0.1', colors.lightgrey)};
   border-radius: 100%;
   object-fit: cover;
-`;
-
-const ReadingTime = styled.span`
-  flex-shrink: 0;
-  margin-left: 20px;
-  color: ${colors.midgrey};
-  font-size: 1.2rem;
-  line-height: 33px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 `;
 
 export interface PostCardProps {

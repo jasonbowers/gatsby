@@ -404,7 +404,7 @@ const GlobalStyles = css`
   }
 
   a {
-    color: ${darken('0.05', colors.blue)};
+    color: ${colors.yellow};
     text-decoration: none;
   }
 

@@ -10,7 +10,7 @@ export const PostFullContent = styled.section`
   margin: 0 auto;
   padding: 70px 100px 0;
   min-height: 230px;
-  font-family: Georgia, serif;
+  font-family: inherit;
   font-size: 2.2rem;
   line-height: 1.6em;
   background: #fff;
@@ -76,13 +76,13 @@ export const PostFullContent = styled.section`
   }
 
   a {
-    color: #000;
+    color: ${colors.yellow};
     word-break: break-word;
-    box-shadow: ${colors.blue} 0 -1px 0 inset;
+    box-shadow: ${colors.yellow} 0 -1px 0 inset;
   }
 
   a:hover {
-    color: ${colors.blue};
+    color: ${darken('0.15', colors.yellow)};
     text-decoration: none;
   }
 
@@ -140,7 +140,7 @@ export const PostFullContent = styled.section`
   blockquote {
     margin: 0 0 1.5em;
     padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    border-left: ${colors.yellow} 3px solid;
   }
 
   blockquote p {
@@ -160,7 +160,7 @@ export const PostFullContent = styled.section`
     font-size: 0.8em;
     line-height: 1em;
     font-weight: 400 !important;
-    background: ${colors.whitegrey};
+    background: ${colors.darkgrey};
     border-radius: 3px;
   }
 
@@ -175,7 +175,7 @@ export const PostFullContent = styled.section`
     max-width: 100%;
     /* border: color(var(--darkgrey) l(-10%)) 1px solid; */
     border: ${darken('0.01', colors.darkgrey)} 1px solid;
-    color: ${colors.whitegrey};
+    color: ${colors.darkgrey};
     font-size: 1.4rem;
     line-height: 1.5em;
     /* background: color(var(--darkgrey) l(-3%)); */
@@ -278,8 +278,8 @@ export const PostFullContent = styled.section`
     margin: 0.5em 0;
     padding: 1em 0 1.5em;
     border: 0;
-    color: ${colors.blue};
-    font-family: Georgia, serif;
+    color: ${colors.yellow};
+    font-family: inherit;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -386,7 +386,7 @@ export const PostFullContent = styled.section`
   /* Taken from overreacted https://github.com/gaearon/overreacted.io/blob/942b41555f5e5ccbb5f93f6c26142cd90b314236/src/utils/global.css#L68 */
   code[class*='language-'],
   pre[class*='language-'] {
-    color: white;
+    color: grey;
     background: none;
     font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
     font-feature-settings: normal;

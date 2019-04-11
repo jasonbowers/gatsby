@@ -2,7 +2,7 @@
 layout: post
 title: 'Test post 1!'
 author: Jason
-tags: ['Getting Started', 'speeches']
+tags: ['brew review']
 image: img/writing.jpg
 date: '2019-04-10T23:46:37.121Z'
 draft: false
