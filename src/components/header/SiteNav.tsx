@@ -27,6 +27,28 @@ const SiteNavStyles = css`
   overflow-y: hidden;
   height: 55px;
   font-size: 1.2rem;
+
+  @media (max-width: 700px) {
+    overflow: visible;
+
+    :before {
+      content: '<';
+      position: absolute;
+      left: -15px;
+      top: 13px;
+      font-size: 2rem;
+      opacity: 0.5;
+    }
+
+    :after {
+      content: '>';
+      position: absolute;
+      right: -15px;
+      top: 13px;
+      font-size: 2rem;
+      opacity: 0.5;
+    }
+  }
 `;
 
 const SiteNavLeft = styled.div`
@@ -41,12 +63,13 @@ const SiteNavLeft = styled.div`
   letter-spacing: 0.4px;
   white-space: nowrap;
   font-size: 1.5rem;
-
   -ms-overflow-scrolling: touch;
 
   @media (max-width: 700px) {
-    margin-right: 0;
-    padding-left: 4vw;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: relative;
   }
 `;
 
@@ -148,6 +171,15 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
             {/* TODO: mark current nav item - add class nav-current */}
             <li role="menuitem">
               <Link to="/tags/brew-review/">Brew Review</Link>
+            </li>
+            <li role="menuitem">
+              <Link to="/tags/brew-review/">Brews</Link>
+            </li>
+            <li role="menuitem">
+              <Link to="/tags/brew-review/">Reviews</Link>
+            </li>
+            <li role="menuitem">
+              <Link to="/tags/brew-review/">Brew'n and Review'n</Link>
             </li>
             <li role="menuitem">
               <Link to="/about">About</Link>

@@ -29,6 +29,10 @@ const AuthorCardButton = css`
     color: ${darken('0.15', colors.yellow)};
     text-decoration: none;
   }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export interface PostFullFooterRightProps {

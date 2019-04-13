@@ -29,14 +29,14 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'Jasons Brews',
+  title: 'The Hop Shot',
   description: 'Beer stuff.',
   coverImage: 'img/hb-cover.png',
   logo: 'img/HopShot-Logo',
   lang: 'en',
-  siteUrl: 'https://gatsby-casper.netlify.com',
-  facebook: 'https://www.facebook.com/ghost',
-  twitter: 'https://twitter.com/tryghost',
+  siteUrl: 'https://www.thehopshot.com',
+  facebook: 'https://www.facebook.com/',
+  twitter: 'https://twitter.com/thehopshot',
   showSubscribe: true,
   mailchimpAction:
     'https://gmail.us20.list-manage.com/subscribe/post?u=4bc1a5d52218e76c96ba20d15&amp;id=009c8ff4fc',

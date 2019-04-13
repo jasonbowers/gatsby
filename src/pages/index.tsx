@@ -140,7 +140,7 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
                   config.title
                 )}
               </SiteTitle>
-              <SiteDescription>{config.description}</SiteDescription>
+              {/* <SiteDescription>{config.description}</SiteDescription> */}
             </SiteHeaderContent>
             <SiteNav isHome />
           </div>

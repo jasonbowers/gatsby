@@ -18,8 +18,8 @@ const PageTemplate = css`
 `;
 
 const divStyle = {
-  width: '50vw',
   margin: '0 auto',
+  maxWidth: '1000px',
 };
 
 const About: React.FunctionComponent = () => (

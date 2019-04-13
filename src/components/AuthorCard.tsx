@@ -8,6 +8,7 @@ import { AuthorProfileImage } from '../styles/shared';
 
 const AuthorCardSection = styled.section`
   display: flex;
+  align-items: center;
 `;
 
 const AuthorCardName = styled.h4`
@@ -23,9 +24,15 @@ const AuthorCardName = styled.h4`
   a:hover {
     text-decoration: none;
   }
+
+  @media (max-width: 700px) {
+    margin: 0 auto;
+  }
 `;
 
 const AuthorCardContent = styled.section`
+  flex: 1;
+
   p {
     margin: 0;
     color: ${colors.midgrey};
