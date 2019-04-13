@@ -170,7 +170,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
           <ul css={NavStyles} role="menu">
             {/* TODO: mark current nav item - add class nav-current */}
             <li role="menuitem">
-              <Link to="/tags/brew-review/">Brew Review</Link>
+              <Link to="/tags/brew-review/">Brew Reviews</Link>
             </li>
             <li role="menuitem">
               <Link to="/tags/brew-review/">Brews</Link>
@@ -179,7 +179,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
               <Link to="/tags/brew-review/">Reviews</Link>
             </li>
             <li role="menuitem">
-              <Link to="/tags/brew-review/">Brew'n and Review'n</Link>
+              <Link to="/tags/brew-review/">Brew'n and Reviews'n</Link>
             </li>
             <li role="menuitem">
               <Link to="/about">About</Link>
