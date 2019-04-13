@@ -32,7 +32,7 @@ const config: WebsiteConfig = {
   title: 'Jasons Brews',
   description: 'Beer stuff.',
   coverImage: 'img/hb-cover.png',
-  logo: 'img/hb-logo.png',
+  logo: 'img/HopShot-Logo',
   lang: 'en',
   siteUrl: 'https://gatsby-casper.netlify.com',
   facebook: 'https://www.facebook.com/ghost',

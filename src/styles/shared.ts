@@ -8,6 +8,17 @@ export const outer = css`
   padding: 0 4vw;
 `;
 
+export const headerNavFix = css`
+  :before {
+    content: '';
+    position: absolute;
+    height: 75px;
+    width: 100vw;
+    z-index: 1;
+    background: rgba(0, 0, 0, 1);
+  }
+`;
+
 // Centered content container blocks
 export const inner = css`
   margin: 0 auto;
@@ -31,8 +42,7 @@ export const SiteTitle = styled.h1`
 
 export const SiteDescription = styled.h2`
   z-index: 10;
-  margin: 25px 0;
-  padding: 5px 20px;
+  margin: 0;
   font-size: 3rem;
   font-weight: 300;
   letter-spacing: 5px;
@@ -70,15 +80,15 @@ export const SocialLink = css`
   }
 
   svg {
-    height: 3rem !important;
+    height: 2rem !important;
     fill: #fff;
   }
 `;
 
 export const SiteHeader = css`
   position: relative;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #fff;
   /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
   background: ${darken('0.05', colors.darkgrey)} no-repeat center center;

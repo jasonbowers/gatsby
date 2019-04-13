@@ -25,18 +25,19 @@ const SiteNavStyles = css`
   justify-content: space-between;
   align-items: flex-start;
   overflow-y: hidden;
-  height: 40px;
+  height: 55px;
   font-size: 1.2rem;
 `;
 
 const SiteNavLeft = styled.div`
   display: flex;
   align-items: center;
+  align-self: center;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   margin-right: 10px;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
   letter-spacing: 0.4px;
   white-space: nowrap;
   font-size: 1.5rem;
@@ -81,6 +82,7 @@ const SiteNavRight = styled.div`
   display: flex;
   align-items: center;
   height: 40px;
+  align-self: center;
 
   @media (max-width: 700px) {
     display: none;

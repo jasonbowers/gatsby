@@ -22,7 +22,7 @@ const SiteNavLogoStyles = css`
   img {
     display: block;
     width: auto;
-    height: 38px;
+    height: 50px;
   }
 `;
 
@@ -38,7 +38,7 @@ const SiteNavLogo = () => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
-        logo: file(relativePath: { eq: "img/hb-logo.png" }) {
+        logo: file(relativePath: { eq: "img/HopShot-Logo.png" }) {
           childImageSharp {
             fixed {
               ...GatsbyImageSharpFixed

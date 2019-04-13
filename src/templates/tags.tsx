@@ -13,6 +13,7 @@ import {
   PostFeedRaise,
   SiteDescription,
   SiteHeader,
+  headerNavFix,
   SiteHeaderContent,
   SiteMain,
   SiteTitle,
@@ -52,7 +53,7 @@ interface TagTemplateProps {
 }
 
 const Tags: React.FunctionComponent<TagTemplateProps> = props => {
-  const tag = (props.pageContext.tag) ? props.pageContext.tag : '';
+  const tag = props.pageContext.tag ? props.pageContext.tag : '';
   const { edges, totalCount } = props.data.allMarkdownRemark;
   const tagData = props.data.allTagYaml.edges.find(
     n => n.node.id.toLowerCase() === tag.toLowerCase(),
@@ -84,19 +85,20 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
           />
         )}
       </Helmet>
-      <Wrapper>
+
+      <Wrapper css={headerNavFix}>
         <header
           className={`${tagData && tagData.node.image ? '' : 'no-cover'}`}
           css={[outer, SiteHeader]}
           style={{
             backgroundImage:
-              tagData && tagData.node.image ?
-                `url('${tagData.node.image.childImageSharp.fluid.src}')` :
-                '',
+              tagData && tagData.node.image
+                ? `url('${tagData.node.image.childImageSharp.fluid.src}')`
+                : '',
           }}
         >
+          <SiteNav isHome={false} />
           <div css={inner}>
-            <SiteNav isHome={false} />
             <SiteHeaderContent>
               <SiteTitle>{tag}</SiteTitle>
               <SiteDescription>
